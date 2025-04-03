@@ -2,9 +2,20 @@ import React from "react";
 import { Grid } from "semantic-ui-react";
 import ColdStorage from "./ColdStorage";
 import Details from "./Details";
+import LogPanel from "./LogPanel";
+
 import "../stylesheets/Headquarters.css";
 
-function Headquarters({hosts, selHost, onHostClick, updateActivity, updateLocation}) {
+function Headquarters({
+  hosts,
+  selHost,
+  onHostClick,
+  updateActivity,
+  updateLocation,
+  logs,
+  handleToggleAll,
+  allActive
+}) {
 
   
   return (
@@ -14,8 +25,8 @@ function Headquarters({hosts, selHost, onHostClick, updateActivity, updateLocati
         <Details selHost={selHost} updateActivity={updateActivity}updateLocation={updateLocation}/>
       </Grid.Column>
       <Grid.Column width={3}>
-        {/* and here. Take visual cues from the screenshot/video in the Readme. */}
-      </Grid.Column>
+  <LogPanel logs={logs} handleToggleAll={handleToggleAll} allActive={allActive} />
+</Grid.Column>
     </Grid>
   );
 }
