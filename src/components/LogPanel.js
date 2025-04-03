@@ -11,7 +11,6 @@ function LogPanel({ logs, handleToggleAll, allActive }) {
           </p>
         ))}
       </pre>
-
       <Button
         fluid
         color={allActive ? "yellow" : "red"}

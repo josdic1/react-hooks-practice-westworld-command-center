@@ -1,29 +1,26 @@
-import {useState, useEffect  } from 'react';
+import { useState, useEffect } from "react";
 import Area from "./Area";
 import { Segment } from "semantic-ui-react";
 
-function WestworldMap({hosts, selHost, onHostClick}) {
+function WestworldMap({ hosts, selHost, onHostClick }) {
+  const [areas, setAreas] = useState([]);
 
-const [areas, setAreas ] = useState([])
+  useEffect(() => {
+    fetch("http://localhost:3001/areas")
+      .then((r) => r.json())
+      .then(setAreas)
+      .catch((err) => console.error("❌ Area fetch failed:", err));
+  }, []);
 
-useEffect(() => {
-  fetchAreas()
-},[])
-
-const areaList = areas.map(area => (
-  <Area key={area.id} area={area} hosts={hosts} selHost={selHost} onHostClick={onHostClick}/>
-))
-
-  async function fetchAreas() {
-    try {
-      const r = await fetch(`http://localhost:3001/areas`)
-      if(!r.ok){
-        throw new Error("💥 Error");
-      }
-      const data = await r.json()
-      setAreas(data)
-    }catch (error) {console.error("❌ Caught error:", error);}
-  }
+  const areaList = areas.map((area) => (
+    <Area
+      key={area.id}
+      area={area}
+      hosts={hosts}
+      selHost={selHost}
+      onHostClick={onHostClick}
+    />
+  ));
 
   return <Segment id="map">{areaList}</Segment>;
 }

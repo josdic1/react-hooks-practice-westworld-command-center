@@ -67,7 +67,7 @@
       "active": false,
       "imageUrl": "https://vignette.wikia.nocookie.net/westworld/images/f/f3/Akane.jpg/revision/latest/scale-to-width-down/310?cb=20180520132523",
       "gender": "Female",
-      "area": "under_construction",
+      "area": "pariah",
       "authorized": false
     },
     {
@@ -144,7 +144,7 @@
       "id": "15",
       "firstName": "Musashi",
       "lastName": "n/a",
-      "active": false,
+      "active": true,
       "imageUrl": "https://vignette.wikia.nocookie.net/westworld/images/6/6b/Musashi_Akane_No_Mai.jpg/revision/latest/scale-to-width-down/310?cb=20180520131337",
       "gender": "Male",
       "area": "badlands",

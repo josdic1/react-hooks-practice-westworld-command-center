@@ -2,11 +2,8 @@ import React from "react";
 import { Segment } from "semantic-ui-react";
 import HostList from "./HostList";
 
-function ColdStorage({hosts, selHost, onHostClick}) {
-
-  const feederList = hosts.filter(host => (
-    !host.active
-  ))
+function ColdStorage({ hosts, selHost, onHostClick }) {
+  const feederList = hosts.filter((host) => !host.active);
 
   return (
     <Segment.Group className="HQComps">
@@ -14,7 +11,7 @@ function ColdStorage({hosts, selHost, onHostClick}) {
         <h3 className="labels">ColdStorage</h3>
       </Segment>
       <Segment compact>
-        <HostList feederList={feederList} selHost={selHost} onHostClick={onHostClick}/>
+        <HostList feederList={feederList} selHost={selHost} onHostClick={onHostClick} />
       </Segment>
     </Segment.Group>
   );
