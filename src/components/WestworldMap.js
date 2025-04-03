@@ -2,7 +2,7 @@ import {useState, useEffect  } from 'react';
 import Area from "./Area";
 import { Segment } from "semantic-ui-react";
 
-function WestworldMap({hosts}) {
+function WestworldMap({hosts, selHost, onHostClick}) {
 
 const [areas, setAreas ] = useState([])
 
@@ -11,7 +11,7 @@ useEffect(() => {
 },[])
 
 const areaList = areas.map(area => (
-  <Area key={area.id} area={area} hosts={hosts}/>
+  <Area key={area.id} area={area} hosts={hosts} selHost={selHost} onHostClick={onHostClick}/>
 ))
 
   async function fetchAreas() {
