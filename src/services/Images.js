@@ -1,1 +1,1 @@
-export const westworldLogo = "https://www.hbo.com/content/dam/hbodata/series/westworld/episodes/s-01/westworld-s1-1920x1080.jpg"
+export const westworldLogo = "https://resizing.flixster.com/MYoT678QwgNHRG2z9AnCeM5ihOU=/fit-in/352x330/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p13108003_b_h9_aa.jpg"
